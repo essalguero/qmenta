@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="./scripts/user.js"></script>
+        <title>Testing VanillaJS</title>
+    </head>
+    <body class="UserForm">
+        <center>
+            <h1>Testing VanillaJS framework</h1>
+            <script>
+                fetch('http://localhost:8000/')
+                .then(res => {
+                    return res.json();
+                })
+                .then(data => {
+                    console.log(data)
+                })
+                .catch(error => console.log(error));
+            </script>
+        </center>
+        <h2 class="Login">Testing</h2>
+
+        <button onclick="getUserData()">Get User Data</button>
+        <button onClick="getUserImage()">Get User Image</button>
+        
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="./scripts/app.js"></script>
+        <script defer src="./scripts/user.js"></script>
+        <title>Testing VanillaJS</title>
+    </head>
+    <body class="Login">
+        <center>
+            <h1>Testing VanillaJS framework</h1>
+            <script>
+                fetch('http://localhost:8000/')
+                .then(res => {
+                    return res.json();
+                })
+                .then(data => {
+                    console.log(data)
+                })
+                .catch(error => console.log(error));
+            </script>
+        </center>
+        <h2 class="Login">Testing</h2>
+
+        <form class="loginForm" id="loginForm" method="post"> <!--action="http://localhost:8000/logging">-->
+            <div>
+                <label for="username">username</label>
+                <input type="text" id="username" class="input" name="username"/>
+                <span class="error-message"></span>
+            </div>
+            <div>
+                <label for="password">password</label>
+                <input type="password" id="password" class="password" name="password"/>
+                <span class="error-message"></span>
+            </div>
+            <div>
+                <button class="button" type="submit">Login</button>
+            </div>
+
+        </form>
+
+        <div class="buttonsClass" id="buttonsClass" style="visibility:hidden">
+            <button onclick="getUserData()">Get User Data</button>
+            <button onClick="getUserImage()">Get User Image</button>
+        </div>
+        
+    </body>
+</html>
